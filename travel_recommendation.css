@@ -2,10 +2,38 @@
     background-color: steelblue;
 }
 
+body {
+    background-image: url("https://res.cloudinary.com/dtljonz0f/image/upload/c_fill,ar_3:2,w_3840,g_auto/f_auto/q_auto/v1/tower_bridge_non-editorial_lkjzih?_a=BAVAZGDY0");
+    background-size: cover; 
+}
+
 #navbar {
     background: white;
     border-radius: 10%;
     margin-left: 15;
+}
+
+.Introduction {
+    text-align: center;
+    color: black;
+    text-decoration: dotted;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f, 0 0 40px #00f;text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f, 0 0 40px #00f;
+}
+
+.Intro1 {
+    color: white;
+    font-family: 'Lucida Sans';
+    text-align: left;
+    margin-left: 2%;
+}
+
+.Intro2 {
+    color: white;
+    font-family: 'Lucida Sans';
+    text-align: left;
+    margin-left: 2%;
 }
 
 .links {
