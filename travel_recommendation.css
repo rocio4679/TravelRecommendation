@@ -1,0 +1,17 @@
+.topbar {
+    background-color: steelblue;
+}
+
+#navbar {
+    background: white;
+    border-radius: 10%;
+    margin-left: 15;
+}
+
+.links {
+    justify-content: left;
+}
+
+.search-objects {
+    justify-content: right;
+}
