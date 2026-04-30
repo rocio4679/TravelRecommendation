@@ -15,7 +15,7 @@ body {
 
 .Introduction {
     text-align: center;
-    color: black;
+    color: darkblue;
     text-decoration: dotted;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
@@ -23,17 +23,23 @@ body {
 }
 
 .Intro1 {
-    color: white;
-    font-family: 'Lucida Sans';
+    color: whitesmoke;
+    font-family: 'Helvetica';
+    font-weight: bold;
     text-align: left;
     margin-left: 2%;
+    font-size: 25px;
+    -webkit-text-stroke: 1.2px black;
 }
 
 .Intro2 {
-    color: white;
-    font-family: 'Lucida Sans';
+    color: black;
+    font-family: 'Helvetica';
     text-align: left;
+    font-weight: bold;
+    font-size: 20px;  
     margin-left: 2%;
+    -webkit-text-stroke: 0.1px white; 
 }
 
 .links {
