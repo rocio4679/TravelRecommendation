@@ -1,5 +1,11 @@
 .topbar {
-    background-color: steelblue;
+    background-color: rgb(37, 56, 71);
+    size: 15px; 
+}
+
+a {
+    color: white;
+    margin-right: 15px;
 }
 
 body {
@@ -48,21 +54,32 @@ img {
 }
 
 .links {
-    justify-content: left;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .search-objects {
     justify-content: right;
 }
 
+.search-objects {
+    background-color: white;
+    display: flex;
+    justify-content: right;
+
+}
+
 #search {
     color: white;
-    background-color: darkgreen;
+    background-color: rgb(22, 97, 72);
+    justify-content: right;
+    margin-right: 15px;
 }
 
 #clear {
     color: white;
-    background: darkgreen;
+    background: rgb(22, 97, 72);
 }
 
 .BodyHeader {
