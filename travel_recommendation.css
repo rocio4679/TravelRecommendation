@@ -1,6 +1,6 @@
 .topbar {
     background-color: rgb(37, 56, 71);
-    size: 15px; 
+    size: 13px; 
 }
 
 a {
@@ -17,11 +17,12 @@ img {
     margin-left: 1.5%;
 }
 
- /* #navbar {
+ #navbar {
     background: white;
     border-radius: 10%;
-    margin-left: 15;
-} */
+    border: white;
+    color: darkgray;
+}
 
 .Introduction {
     text-align: center;
@@ -64,84 +65,74 @@ img {
     color: white;
     font-family: 'Helvetica';
     font-weight: bold;
-    padding-top: 1%;
-    padding-bottom: 1%; 
+    padding-top: 0.35%;
+    padding-bottom: 0.35%; 
 }
 
 .links {
-    /* text-align: left;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    display: flex;
-    margin-left: 18px;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    border: 2px solid red; */
     flex: 1;
     text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%; 
+    padding-top: 0.45%;
+    padding-bottom: 0.35%;
+    margin-right: 280px; 
+    font-family: 'Helvetica'
 }
 
-
-  
-  .search-input {
-    flex-grow: 1;      /* Fill remaining space */
-    border: none;      /* Remove default border */
-    outline: none;     /* Remove focus blue ring */
-    padding: 10px;
-    background: transparent;
-  }
-  
-  .search-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  
-  .search-button:hover {
-    background-color: #0056b3;
-  }
-
-  .search-container {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 25px; /* Rounded look */
-    padding: 5px;
-    max-width: 400px;
-    background-color: #fff;
-  }
-
-.search-objects {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    max-width: 400px;
-    background-color: #fff;
-    /* width: 20%;
-    margin: 30 auto; 
-    justify-content: right;
-    margin-left: 55%;
-    border: 3px solid pink; */
+.links_aboutme {
     flex: 1;
-    text-align: right;
-    padding-top: 1%;
-    padding-bottom: 1%; 
+    text-align: center;
+    padding-top: 0.45%;
+    padding-bottom: 0.35%;
+    margin-right: 568px;
+    font-family: 'Helvetica';
+}
+  
+.search-input {
+flex-grow: 1;      /* Fill remaining space */
+border: none;      /* Remove default border */
+outline: none;     /* Remove focus blue ring */
+padding: 10px;
+background: transparent;
+}
+
+.search-button {
+background-color: #007bff;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+}
+
+.search-button:hover {
+background-color: #0056b3;
+}
+
+.search-container {
+display: flex;
+border: 1px solid #ccc;
+border-radius: 25px; /* Rounded look */
+padding: 5px;
+max-width: 400px;
+background-color: #fff;
 }
 
 #search {
     color: white;
     background-color: rgb(22, 97, 72);
     justify-content: right;
+    border-radius: 10px;
 }
 
 #clear {
     color: white;
     background: rgb(22, 97, 72);
+    border-radius: 10px;
+}
+
+#BookNow {
+    color: white;
+    background: rgb(22, 97, 72);
+    margin-left: 130px;
 }
 
 .BodyHeader {
@@ -150,4 +141,9 @@ img {
     color: darkblue; 
     font-family:'Lucida Sans';
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f, 0 0 40px #00f;text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f, 0 0 40px #00f;text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f, 0 0 40px #00f;text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f, 0 0 40px #00f;
+    margin-left: 80px;
+}
+
+#socials {
+    margin-left: 80px;
 }
