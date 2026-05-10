@@ -4,19 +4,24 @@ function FetchTravelAPI() {
     const Keyword = document.getElementById('navbar').value;
     var RetKeyWord; 
 
-    RetKeyWord = KeywordSearch(Keyword);    
+    //console.log(RetKeyWord);
+    //RetKeyWord = KeywordSearch(Keyword);    
 
-    if(RetKeyWord != "error") 
+    if(RetKeyWord != "error")
     {
         fetch('travel_recommendation_api.json')
             .then(response => response.json())
             .then(data => {
-                console.log(data.filter(item => item.Keyword)); 
+                //Sample continue here
                 console.log(data);
-                 //Sample continue here
-                 const filtered = data.filter(user => 
-  user.name.toLowerCase().includes(searchTerm.toLowerCase())
-);
+                console.log(data.countries.find(item => item.name.toLowerCase()));
+
+                //const result1 = data.countries.find(item => item.name.toLowerCase() === "Australia");
+                //const result2 = result1.cities.join(', ');
+
+                console.log(result2.name); 
+                //console.log(result);
+                //console.log(filtered); 
             })
             .catch(error => {
                 console.error("Error: ", error);
