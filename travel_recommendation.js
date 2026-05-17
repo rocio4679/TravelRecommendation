@@ -1,11 +1,11 @@
 const btnSearch = document.getElementById('search');
+const btnClear = document.getElementById('clear');
+const navbarID = document.getElementById('navbar');
+const ArrayResults = []; 
 
 function FetchTravelAPI() {
     const Keyword = document.getElementById('navbar').value;
     var RetKeyWord; 
-
-    //console.log(RetKeyWord);
-    //RetKeyWord = KeywordSearch(Keyword);    
 
     if(RetKeyWord != "error")
     {
@@ -14,12 +14,28 @@ function FetchTravelAPI() {
             .then(data => {
                 //Sample continue here
                 console.log(data);
-                console.log(data.countries.find(item => item.name.toLowerCase()));
+
+                if(Keyword === "countries") {
+                    //Currently just fetching the first country, take care of that
+                    console.log(data.countries.find(item => item.name.toLowerCase()));
+                }
+
+                if(Keyword === "beaches") {
+                    console.log(data.beaches.find(item => item.name.toLowerCase()));
+                }
+
+                if(Keyword === "temples")
+                {
+                    console.log(data.temples.find(item => item.name.toLowerCase()));
+                }
+                //console.log(data.countries.find(item => item.name.toLowerCase()));
 
                 //const result1 = data.countries.find(item => item.name.toLowerCase() === "Australia");
+                //const result2 = data.countries.find(item => item.name.toLowerCase());
+
                 //const result2 = result1.cities.join(', ');
 
-                console.log(result2.name); 
+                //console.log(result2.name); 
                 //console.log(result);
                 //console.log(filtered); 
             })
@@ -34,6 +50,8 @@ function FetchTravelAPI() {
 }
 
 btnSearch.addEventListener('click', FetchTravelAPI);
+btnClear.addEventListener('click', ClearResults);
+navbarID.addEventListener('click', ClearNavBar);
 
 function KeywordSearch(Keyword) {
     var ReturnKeyword;
@@ -60,6 +78,10 @@ function KeywordSearch(Keyword) {
     return ReturnKeyword;  
 }
 
-function ClearResults() {
+function ClearNavBar() {
+    navbarID.value = ""; 
+}
 
+function ClearResults() {
+    ClearNavBar(); 
 }

@@ -78,6 +78,14 @@ img {
     font-family: 'Helvetica'
 }
 
+#SearchResults {
+    color: darkorange;
+}
+
+.Results {
+    display: grid;
+}
+
 .links_aboutme {
     flex: 1;
     text-align: center;
