@@ -15,29 +15,48 @@ function FetchTravelAPI() {
                 //Sample continue here
                 console.log(data);
 
+                //Figure out Cities
+                if(Keyword === "Australia") {
+                    console.log(data.countries[0].cities);
+                    for(const item in data.countries[0].cities) {
+                        console.log(item.name);
+                    }
+                } 
+
+                if(Keyword === "Japan") {
+
+                }
+
+                if(Keyword === "Brazil") {
+
+                }
+
                 if(Keyword === "countries") {
-                    //Currently just fetching the first country, take care of that
-                    console.log(data.countries.find(item => item.name.toLowerCase()));
+                    //Fetching all countries
+                    console.log(data.countries);
+                    
+                    for(const item of data.countries) {
+                        console.log(item.name);
+                    }
+                    
                 }
 
                 if(Keyword === "beaches") {
-                    console.log(data.beaches.find(item => item.name.toLowerCase()));
+                    console.log(data.beaches);
+
+                    for(const item of data.beaches) {
+                        console.log(item.name);
+                    }
                 }
 
                 if(Keyword === "temples")
                 {
-                    console.log(data.temples.find(item => item.name.toLowerCase()));
+                    console.log(data.temples);
+
+                    for(const item of data.temples) {
+                        console.log(item.name); 
+                    }
                 }
-                //console.log(data.countries.find(item => item.name.toLowerCase()));
-
-                //const result1 = data.countries.find(item => item.name.toLowerCase() === "Australia");
-                //const result2 = data.countries.find(item => item.name.toLowerCase());
-
-                //const result2 = result1.cities.join(', ');
-
-                //console.log(result2.name); 
-                //console.log(result);
-                //console.log(filtered); 
             })
             .catch(error => {
                 console.error("Error: ", error);
@@ -69,7 +88,19 @@ function KeywordSearch(Keyword) {
                 {
                     ReturnKeyword = "temples";
                 } else {
-                    ReturnKeyword = "error"; 
+                    if(KeyText.ToUpperCase() === "AUSTRALIA") {
+                        ReturnKeyword = "Australia";
+                    } else {
+                        if (KeyText.ToUpperCase() === "JAPAN") {
+                            ReturnKeyword = "Japan";
+                        } else {
+                            if (KeyText.ToUpperCase() === "BRAZIL") {
+                                ReturnKeyword = "Brazil";
+                            } else {
+                                ReturnKeyword = "error";
+                            }
+                        }
+                    }
                 }
             } 
         }
