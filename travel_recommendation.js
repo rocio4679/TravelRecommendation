@@ -12,23 +12,52 @@ function FetchTravelAPI() {
         fetch('travel_recommendation_api.json')
             .then(response => response.json())
             .then(data => {
-                //Sample continue here
-                console.log(data);
-
+                
                 //Figure out Cities
-                if(Keyword === "Australia") {
+                if(Keyword.toLowerCase() === "australia") {
                     console.log(data.countries[0].cities);
-                    for(const item in data.countries[0].cities) {
-                        console.log(item.name);
+
+                    const citiesArray = data.countries[0].cities; 
+                    
+                    for(const item of citiesArray)
+                    {
+                        const city = item.name;
+                        const cityName = city.substring(0, city.indexOf(","));
+                        console.log(cityName);
+
+                        //Display images here
+
+                        const cities = data.counties[0].cities.find(cityName => city.toLowerCase())
+
+                        const condition = data.conditions.find(item => item.name.toLowerCase() === input);
                     }
+
                 } 
 
-                if(Keyword === "Japan") {
+                if(Keyword.toLowerCase() === "japan") {
+                    console.log(data.countries[1].cities);
 
+                    const citiesArray = data.countries[1].cities; 
+                    
+                    for(const item of citiesArray)
+                    {
+                        const city = item.name;
+                        const cityName = city.substring(0, city.indexOf(","));
+                        console.log(cityName);
+                    }
                 }
 
-                if(Keyword === "Brazil") {
+                if(Keyword.toLowerCase() === "brazil") {
+                    console.log(data.countries[2].cities);
 
+                    const citiesArray = data.countries[2].cities; 
+                    
+                    for(const item of citiesArray)
+                    {
+                        const city = item.name;
+                        const cityName = city.substring(0, city.indexOf(","));
+                        console.log(cityName);
+                    }
                 }
 
                 if(Keyword === "countries") {
