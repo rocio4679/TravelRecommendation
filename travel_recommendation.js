@@ -1,7 +1,10 @@
 const btnSearch = document.getElementById('search');
 const btnClear = document.getElementById('clear');
 const navbarID = document.getElementById('navbar');
+const resultDiv = document.getElementById('result');
+const introDiv = document.getElementById('DivIntro');
 const ArrayResults = []; 
+
 
 function FetchTravelAPI() {
     const Keyword = document.getElementById('navbar').value;
@@ -12,13 +15,39 @@ function FetchTravelAPI() {
         fetch('travel_recommendation_api.json')
             .then(response => response.json())
             .then(data => {
-                
+                resultDiv.innerHTML += `<br>`;
+
                 //Figure out Cities
                 if(Keyword.toLowerCase() === "australia") {
                     console.log(data.countries[0].cities);
 
                     const citiesArray = data.countries[0].cities; 
+
+                    for(const item of citiesArray)
+                    {
+                        const city = item.name;
+                        const cityText = item.description; 
+                        const cityName = city.substring(0, city.indexOf(","));
+                        console.log(cityName);
+
+                        //Display images here
+                        resultDiv.innerHTML += `<img src="${cityName}.png" width="450px" height="300px">`;
+                        resultDiv.innerHTML += `<p>${cityText}</p>`
+                        introDiv.innerHTML = "";
+                        //const cities = data.countries[0].cities.find(cityName => city.toLowerCase())
+                        
+                    }
+
+                } 
+
+                if(Keyword.toLowerCase() === "japan") {
+                    console.log(data.countries[1].cities);
                     
+                    const citiesArray = data.countries[1].cities; 
+                    
+                    resultDiv.innerHTML = "";
+                    resultDiv.innerHTML += `<br>`;
+
                     for(const item of citiesArray)
                     {
                         const city = item.name;
@@ -26,24 +55,10 @@ function FetchTravelAPI() {
                         console.log(cityName);
 
                         //Display images here
-
-                        const cities = data.counties[0].cities.find(cityName => city.toLowerCase())
-
-                        const condition = data.conditions.find(item => item.name.toLowerCase() === input);
-                    }
-
-                } 
-
-                if(Keyword.toLowerCase() === "japan") {
-                    console.log(data.countries[1].cities);
-
-                    const citiesArray = data.countries[1].cities; 
-                    
-                    for(const item of citiesArray)
-                    {
-                        const city = item.name;
-                        const cityName = city.substring(0, city.indexOf(","));
-                        console.log(cityName);
+                        //resultDiv.innerHTML += `<br>`
+                        resultDiv.innerHTML += `<img src="${cityName}.png" width="450px" height="300px">`;
+                        introDiv.innerHTML = "";//Display images here
+                        
                     }
                 }
 
@@ -52,11 +67,17 @@ function FetchTravelAPI() {
 
                     const citiesArray = data.countries[2].cities; 
                     
+                    resultDiv.innerHTML = ""; 
+                    resultDiv.innerHTML += `<br>`;
                     for(const item of citiesArray)
                     {
                         const city = item.name;
                         const cityName = city.substring(0, city.indexOf(","));
                         console.log(cityName);
+
+                        //Display images here
+                        resultDiv.innerHTML += `<img src="${cityName}.png" width="450px" height="300px">`;
+                        introDiv.innerHTML = "";
                     }
                 }
 
