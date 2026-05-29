@@ -8,6 +8,8 @@ a {
     margin-right: 15px;
 }
 
+
+
 body {
     background-image: url("https://res.cloudinary.com/dtljonz0f/image/upload/c_fill,ar_3:2,w_3840,g_auto/f_auto/q_auto/v1/tower_bridge_non-editorial_lkjzih?_a=BAVAZGDY0");
     background-size: cover; 
@@ -96,33 +98,47 @@ img {
 }
   
 .search-input {
-flex-grow: 1;      /* Fill remaining space */
-border: none;      /* Remove default border */
-outline: none;     /* Remove focus blue ring */
-padding: 10px;
-background: transparent;
+    flex-grow: 1;      /* Fill remaining space */
+    border: none;      /* Remove default border */
+    outline: none;     /* Remove focus blue ring */
+    padding: 10px;
+    background: transparent;
 }
 
 .search-button {
-background-color: #007bff;
-color: white;
-border: none;
-padding: 10px 20px;
-cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 .search-button:hover {
-background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 .search-container {
-display: flex;
-border: 1px solid #ccc;
-border-radius: 25px; /* Rounded look */
-padding: 5px;
-max-width: 400px;
-background-color: #fff;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Rounded look */
+    padding: 5px;
+    max-width: 400px;
+    background-color: #fff;
 }
+
+.fullres {
+    display: flex;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: white;
+    max-width: 1200px;
+    max-height: 500px;
+}
+
+#result {
+    flex-grow: 1;
+}
+
 
 #search {
     color: white;
@@ -135,6 +151,10 @@ background-color: #fff;
     color: white;
     background: rgb(22, 97, 72);
     border-radius: 10px;
+}
+
+#result {
+    border-color: white;
 }
 
 #BookNow {

@@ -16,6 +16,7 @@ function FetchTravelAPI() {
             .then(response => response.json())
             .then(data => {
                 resultDiv.innerHTML += `<br>`;
+                resultDiv.innerHTML += `<h2 style="color: white">Search Results:</h2>`
 
                 //Figure out Cities
                 if(Keyword.toLowerCase() === "australia") {
@@ -32,7 +33,17 @@ function FetchTravelAPI() {
 
                         //Display images here
                         resultDiv.innerHTML += `<img src="${cityName}.png" width="450px" height="300px">`;
-                        resultDiv.innerHTML += `<p>${cityText}</p>`
+                        resultDiv.innerHTML += `<p style="color: black" class="restext">${cityText}</p>`
+
+                        const result_texts = document.querySelectorAll('.restext');
+
+                        result_texts.forEach(result_text => {
+                            result_text.style.display = flex; 
+                            result_text.style.flexDirection = 'column';
+
+                        });
+
+                        //const cards = document.querySelectorAll('.dynamic-card');
                         introDiv.innerHTML = "";
                         //const cities = data.countries[0].cities.find(cityName => city.toLowerCase())
                         
@@ -56,7 +67,7 @@ function FetchTravelAPI() {
 
                         //Display images here
                         //resultDiv.innerHTML += `<br>`
-                        resultDiv.innerHTML += `<img src="${cityName}.png" width="450px" height="300px">`;
+                        resultDiv.innerHTML += `<img src="${cityName}.png" width="400px" height="280px">`;
                         introDiv.innerHTML = "";//Display images here
                         
                     }
@@ -107,6 +118,8 @@ function FetchTravelAPI() {
                         console.log(item.name); 
                     }
                 }
+
+                resultDiv.innerHTML += `<br><br>`;
             })
             .catch(error => {
                 console.error("Error: ", error);
