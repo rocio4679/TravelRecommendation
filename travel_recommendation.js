@@ -33,15 +33,34 @@ function FetchTravelAPI() {
 
                         //Display images here
                         resultDiv.innerHTML += `<img src="${cityName}.png" width="450px" height="300px">`;
-                        resultDiv.innerHTML += `<p style="color: black" class="restext">${cityText}</p>`
+                        //resultDiv.innerHTML += `<p style="color: black" class="restext">${cityText}</p>`
 
-                        const result_texts = document.querySelectorAll('.restext');
+                        resultDiv.innerHTML += `<div id="${cityName}div" class="newlyCreated"></div>`;
 
-                        result_texts.forEach(result_text => {
-                            result_text.style.display = flex; 
-                            result_text.style.flexDirection = 'column';
+                        resultDiv.style.width = "1000px";
+                        resultDiv.style.height = "500px";
 
-                        });
+                        const newDivName = cityName + "div";
+
+                        const textDiv = document.getElementById(newDivName);
+
+                        //const textsL = document.querySelectorAll('.newlyCreated');
+
+                        textDiv.style.backgroundColor = "lightblue";
+                        textDiv.style.paddingLeft = "40px";
+                        textDiv.style.width = "400px";
+                        textDiv.style.height = "50px";
+                        //textsL.forEach(textL => {
+                        //    textL
+                        //}); 
+                        textDiv.innerHTML += `<p style="color: black" class="restext">${cityText}</p>`;
+                        //const result_texts = document.querySelectorAll('.restext');
+
+                        //result_texts.forEach(result_text => {
+                            //result_text.style.display = flex; 
+                            //result_text.style.flexDirection = 'column';
+
+                        //});
 
                         //const cards = document.querySelectorAll('.dynamic-card');
                         introDiv.innerHTML = "";
