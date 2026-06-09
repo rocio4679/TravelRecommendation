@@ -37,8 +37,9 @@ function FetchTravelAPI() {
 
                         resultDiv.innerHTML += `<div id="${cityName}div" class="newlyCreated"></div>`;
 
-                        resultDiv.style.width = "1000px";
-                        resultDiv.style.height = "500px";
+                        //resultDiv.style.width = "1000px";
+                        //resultDiv.style.height = "500px";
+                        resultDiv.style.display = "flex";
 
                         const newDivName = cityName + "div";
 
@@ -46,10 +47,12 @@ function FetchTravelAPI() {
 
                         //const textsL = document.querySelectorAll('.newlyCreated');
 
-                        textDiv.style.backgroundColor = "lightblue";
-                        textDiv.style.paddingLeft = "40px";
-                        textDiv.style.width = "400px";
-                        textDiv.style.height = "50px";
+                        //textDiv.innerHTML += "<br><br><br>";
+                        //textDiv.style.backgroundColor = "lightblue";
+                        //textDiv.style.paddingLeft = "40px";
+                        //textDiv.style.width = "400px";
+                        //textDiv.style.height = "50px";
+                        //textDiv.style.display = "flex"; 
                         //textsL.forEach(textL => {
                         //    textL
                         //}); 
@@ -76,7 +79,7 @@ function FetchTravelAPI() {
                     const citiesArray = data.countries[1].cities; 
                     
                     resultDiv.innerHTML = "";
-                    resultDiv.innerHTML += `<br>`;
+//                    resultDiv.innerHTML += `<br>`;
 
                     for(const item of citiesArray)
                     {
@@ -98,7 +101,7 @@ function FetchTravelAPI() {
                     const citiesArray = data.countries[2].cities; 
                     
                     resultDiv.innerHTML = ""; 
-                    resultDiv.innerHTML += `<br>`;
+  //                  resultDiv.innerHTML += `<br>`;
                     for(const item of citiesArray)
                     {
                         const city = item.name;
@@ -138,7 +141,7 @@ function FetchTravelAPI() {
                     }
                 }
 
-                resultDiv.innerHTML += `<br><br>`;
+    //            resultDiv.innerHTML += `<br><br>`;
             })
             .catch(error => {
                 console.error("Error: ", error);

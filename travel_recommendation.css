@@ -8,8 +8,6 @@ a {
     margin-right: 15px;
 }
 
-
-
 body {
     background-image: url("https://res.cloudinary.com/dtljonz0f/image/upload/c_fill,ar_3:2,w_3840,g_auto/f_auto/q_auto/v1/tower_bridge_non-editorial_lkjzih?_a=BAVAZGDY0");
     background-size: cover; 
@@ -131,14 +129,13 @@ img {
     border: 1px solid black;
     padding: 5px;
     background-color: white;
-    max-width: 1200px;
+    max-width: 1000px;
     max-height: 500px;
 }
 
 #result {
     flex-grow: 1;
 }
-
 
 #search {
     color: white;
@@ -154,7 +151,7 @@ img {
 }
 
 #result {
-    border-color: white;
+    border-color:  black;
 }
 
 #BookNow {
