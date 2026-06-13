@@ -2,10 +2,9 @@ const btnSearch = document.getElementById('search');
 const btnClear = document.getElementById('clear');
 const navbarID = document.getElementById('navbar');
 const resultDiv = document.getElementById('result');
-const textResultDiv = document.getElementById('textResult');
+//const textResultDiv = document.getElementById('textResult');
 const introDiv = document.getElementById('DivIntro');
 const ArrayResults = []; 
-
 
 function FetchTravelAPI() {
     const Keyword = document.getElementById('navbar').value;
@@ -17,7 +16,7 @@ function FetchTravelAPI() {
             .then(response => response.json())
             .then(data => {
                 resultDiv.innerHTML += `<br>`;
-                resultDiv.innerHTML += `<h2 style="color: white">Search Results:</h2>`
+                resultDiv.innerHTML += `<h2 style="color: white">Search Results:</h2>`;
 
                 //Figure out Cities
                 if(Keyword.toLowerCase() === "australia") {
@@ -32,24 +31,18 @@ function FetchTravelAPI() {
                         const cityName = city.substring(0, city.indexOf(","));
                         console.log(cityName);
 
-                        //
-
-                        //
-
                         //Display images here
-                        resultDiv.innerHTML += `<div class="card">`
+                        //resultDiv.innerHTML += `<div class="card">`;
                         resultDiv.innerHTML += `<img src="${cityName}.png" width="450px" height="300px">`;
                         resultDiv.innerHTML += `<div id="${cityName}div" class="newlyCreated"><p style="color: black" class="restext">${cityText}</p></div>`;
-                        resultDiv.innerHTML += `</div>`;                         
-                        //const newDivName = cityName + "div";
-
-                        //const textDiv = document.getElementById(newDivName);
-                        resultDiv.style.display = "grid"; 
-                        ////textDiv.innerHTML += `<p style="color: black" class="restext">${cityText}</p>`;
-                        introDiv.innerHTML = "";
+                        //resultDiv.innerHTML += `</div>`;  
                         
+                        resultDiv.style.gridTemplateColumns = "repeat(2, 1fr)";
+                        resultDiv.style.gap = "16px";
+                
+                        resultDiv.style.display = "grid"; 
+                        introDiv.innerHTML = "";
                     }
-
                 } 
 
                 if(Keyword.toLowerCase() === "japan") {

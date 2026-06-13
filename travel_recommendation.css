@@ -136,12 +136,8 @@ img {
     border: 1px solid black;
     padding: 5px;
     background-color: white;
-    max-width: 1000px;
+    max-width: 1300px;
     max-height: 500px;
-}
-
-#result {
-    flex-grow: 1;
 }
 
 #search {
@@ -159,6 +155,10 @@ img {
 
 #result {
     border-color:  black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    flex-grow: 1;
 }
 
 #BookNow {
@@ -175,6 +175,10 @@ img {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f, 0 0 40px #00f;text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f, 0 0 40px #00f;text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f, 0 0 40px #00f;text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f, 0 0 40px #00f;
     margin-left: 80px;
 }
+
+.card {
+    width: 300px;
+  }
 
 #socials {
     margin-left: 80px;
