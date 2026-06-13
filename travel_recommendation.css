@@ -8,6 +8,13 @@ a {
     margin-right: 15px;
 }
 
+.restext {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 450px; /* match your image width */
+}
+
 body {
     background-image: url("https://res.cloudinary.com/dtljonz0f/image/upload/c_fill,ar_3:2,w_3840,g_auto/f_auto/q_auto/v1/tower_bridge_non-editorial_lkjzih?_a=BAVAZGDY0");
     background-size: cover; 

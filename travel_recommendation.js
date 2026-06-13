@@ -2,6 +2,7 @@ const btnSearch = document.getElementById('search');
 const btnClear = document.getElementById('clear');
 const navbarID = document.getElementById('navbar');
 const resultDiv = document.getElementById('result');
+const textResultDiv = document.getElementById('textResult');
 const introDiv = document.getElementById('DivIntro');
 const ArrayResults = []; 
 
@@ -31,43 +32,21 @@ function FetchTravelAPI() {
                         const cityName = city.substring(0, city.indexOf(","));
                         console.log(cityName);
 
+                        //
+
+                        //
+
                         //Display images here
+                        resultDiv.innerHTML += `<div class="card">`
                         resultDiv.innerHTML += `<img src="${cityName}.png" width="450px" height="300px">`;
-                        //resultDiv.innerHTML += `<p style="color: black" class="restext">${cityText}</p>`
+                        resultDiv.innerHTML += `<div id="${cityName}div" class="newlyCreated"><p style="color: black" class="restext">${cityText}</p></div>`;
+                        resultDiv.innerHTML += `</div>`;                         
+                        //const newDivName = cityName + "div";
 
-                        resultDiv.innerHTML += `<div id="${cityName}div" class="newlyCreated"></div>`;
-
-                        //resultDiv.style.width = "1000px";
-                        //resultDiv.style.height = "500px";
-                        resultDiv.style.display = "flex";
-
-                        const newDivName = cityName + "div";
-
-                        const textDiv = document.getElementById(newDivName);
-
-                        //const textsL = document.querySelectorAll('.newlyCreated');
-
-                        //textDiv.innerHTML += "<br><br><br>";
-                        //textDiv.style.backgroundColor = "lightblue";
-                        //textDiv.style.paddingLeft = "40px";
-                        //textDiv.style.width = "400px";
-                        //textDiv.style.height = "50px";
-                        //textDiv.style.display = "flex"; 
-                        //textsL.forEach(textL => {
-                        //    textL
-                        //}); 
-                        textDiv.innerHTML += `<p style="color: black" class="restext">${cityText}</p>`;
-                        //const result_texts = document.querySelectorAll('.restext');
-
-                        //result_texts.forEach(result_text => {
-                            //result_text.style.display = flex; 
-                            //result_text.style.flexDirection = 'column';
-
-                        //});
-
-                        //const cards = document.querySelectorAll('.dynamic-card');
+                        //const textDiv = document.getElementById(newDivName);
+                        resultDiv.style.display = "grid"; 
+                        ////textDiv.innerHTML += `<p style="color: black" class="restext">${cityText}</p>`;
                         introDiv.innerHTML = "";
-                        //const cities = data.countries[0].cities.find(cityName => city.toLowerCase())
                         
                     }
 
